@@ -1,0 +1,16 @@
+version: '3.8.0'
+# files used for docker-compose 
+services:
+  service1-postgres:
+    image: postgres #from hub.docker.com
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: review
+      POSTGRES_PASSWORD: password
+  
+  service2-redis:
+    image: redis
+    ports:
+      - "6379:6379"
